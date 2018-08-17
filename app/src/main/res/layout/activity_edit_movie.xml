@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+
+    <LinearLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activities.EditMovieActivity"
+        android:padding="5dp"
+        android:orientation="vertical">
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Movie Information"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:layout_marginTop="15dp"
+            android:text="Movie name"/>
+        <EditText
+            android:id="@+id/idName_editMovie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Movie Name"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:layout_marginTop="10dp"
+            android:text="Movie release Year"/>
+        <EditText
+            android:id="@+id/idCatagory_editMovie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Movie release Year"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:layout_marginTop="10dp"
+            android:text="Movie Description"/>
+
+        <EditText
+            android:id="@+id/idDesc_editMovie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:hint="Movie Description"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:layout_marginTop="10dp"
+            android:text="Trailer video id"/>
+        <EditText
+            android:id="@+id/idVideoId_editMovie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:hint="Youtube video id"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:layout_marginTop="10dp"
+            android:text="Movie Link 1"/>
+        <EditText
+            android:id="@+id/idLink1_editMovie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Movie Link 1"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:layout_marginTop="10dp"
+            android:text="Movie Link 2"/>
+        <EditText
+            android:id="@+id/idLink2_editMovie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Movie Link 2"/>
+
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:layout_marginTop="10dp"
+            android:text="Movie Link 3"/>
+        <EditText
+            android:id="@+id/idLink3_editMovie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:hint="Movie Link 3"/>
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:layout_marginTop="10dp"
+            android:text="Movie Link 4"/>
+        <EditText
+            android:id="@+id/idLink4_editMovie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:hint="Movie Link 4"/>
+
+
+
+
+        <Button
+            android:id="@+id/idSelectImageButton_editMovie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:visibility="gone"
+            android:text="Select Image"/>
+
+        <Button
+            android:id="@+id/idEditButton_editMovie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Edit Info"/>
+
+        <Button
+            android:id="@+id/idDeleteButton_editMovie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Delete Movie"/>
+
+
+    </LinearLayout>
+
+</ScrollView>
