@@ -106,6 +106,7 @@ public class MainActivity extends AppCompatActivity {
                 sReleaseYear = etReleaseYear.getText().toString().trim();
                 sVideoId = etVideoId.getText().toString().trim();
 
+
                 if (sCatagory.isEmpty() || sMovieName.isEmpty() || sMovieDesc.isEmpty() || sMovieLink.isEmpty() || sReleaseYear.isEmpty() || imageUri==null){
                     Toast.makeText(MainActivity.this, "Please Provide All Information", Toast.LENGTH_SHORT).show();
                 }
