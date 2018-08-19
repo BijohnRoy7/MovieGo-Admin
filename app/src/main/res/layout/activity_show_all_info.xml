@@ -10,8 +10,8 @@
         android:id="@+id/idEdit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="161dp"
         android:text="Edit Movie Info" />
@@ -21,8 +21,18 @@
         android:id="@+id/idMovieRequests"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:layout_below="@+id/idEdit"
         android:text="Show Movie Requests" />
+
+    <Button
+        android:id="@+id/idSharedMovies"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/idMovieRequests"
+        android:layout_centerHorizontal="true"
+        android:text="Show shared movie links" />
+
+
 </RelativeLayout>

@@ -10,7 +10,7 @@ import com.donate_blood.invenz.moviegoadmin.R;
 
 public class ShowAllInfoActivity extends AppCompatActivity {
 
-    private Button btEditInfo, btShowRequests;
+    private Button btEditInfo, btShowRequests, btSharedMovies;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +19,7 @@ public class ShowAllInfoActivity extends AppCompatActivity {
 
         btEditInfo = findViewById(R.id.idEdit);
         btShowRequests = findViewById(R.id.idMovieRequests);
+        btSharedMovies = findViewById(R.id.idSharedMovies);
 
         btEditInfo.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,6 +36,14 @@ public class ShowAllInfoActivity extends AppCompatActivity {
             }
         });
 
+
+        btSharedMovies.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                startActivity(new Intent(ShowAllInfoActivity.this, SharedMoviesActivity.class));
+            }
+        });
 
     }
 }
