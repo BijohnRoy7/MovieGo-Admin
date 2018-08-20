@@ -13,6 +13,7 @@ public class Constants {
     public static final String SEND_NOTIFICATION_URL = DEFAULT+"sendNotification1.php";
     public static final String GET_SHARED_MOVIES_URL = DEFAULT+"getSharedMovies.php";
     public static final String DELETE_SHARED_MOVIE_URL = DEFAULT+"deleteSharedMovie.php";
+    public static final String BLOCK_UNBLOCK_USER_URL = DEFAULT+"blockUnblockUser.php";
 
 /*
 

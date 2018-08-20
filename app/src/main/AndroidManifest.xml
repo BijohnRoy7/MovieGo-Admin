@@ -23,7 +23,8 @@
         <activity android:name=".activities.ShowRequestsActivity" />
         <activity android:name=".activities.MovieListActivity" />
         <activity android:name=".activities.EditMovieActivity" />
-        <activity android:name=".activities.SharedMoviesActivity"></activity>
+        <activity android:name=".activities.SharedMoviesActivity" />
+        <activity android:name=".activities.BlockUserActivity"></activity>
     </application>
 
 </manifest>

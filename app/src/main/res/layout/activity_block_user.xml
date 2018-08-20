@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.BlockUserActivity"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Block User"
+        android:gravity="center"
+        android:textSize="25dp"
+        android:textStyle="bold"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="User Id"
+        android:layout_marginTop="30dp"/>
+    <EditText
+        android:id="@+id/idUserId_blockUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="User Id"/>
+
+
+
+
+
+    <Button
+        android:id="@+id/idBlock_blockUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Block Now"/>
+
+    <Button
+        android:id="@+id/idUnblock_blockUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Unblock Now"/>
+
+</LinearLayout>

@@ -62,6 +62,8 @@ public class SharedMovieCustomAdapter extends RecyclerView.Adapter<SharedMovieCu
         holder.tvCatagory.setText(sharedMovie.getCatagory());
         holder.tvLink.setText(sharedMovie.getMovieLink());
 
+        holder.tvUserId.setText(sharedMovie.getUserId());
+
         final String id = String.valueOf(sharedMovie.getId());
 
 
@@ -72,9 +74,25 @@ public class SharedMovieCustomAdapter extends RecyclerView.Adapter<SharedMovieCu
 
                 String link = holder.tvLink.getText().toString().trim();
 
-                ClipboardManager clipboard = (ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE);
-                ClipData clip = ClipData.newPlainText("label", link);
-                clipboard.setPrimaryClip(clip);
+                ClipboardManager cm = (ClipboardManager)context.getSystemService(context.CLIPBOARD_SERVICE);
+                cm.setText(link);
+                Toast.makeText(context, "Link Copied", Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
+
+        /*##      copying User Id to block      ###*/
+        holder.ivCopyUserId.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                String userId = holder.tvUserId.getText().toString().trim();
+
+                ClipboardManager cm = (ClipboardManager)context.getSystemService(context.CLIPBOARD_SERVICE);
+                cm.setText(userId);
+                Toast.makeText(context, "User Id Copied", Toast.LENGTH_SHORT).show();
+
 
             }
         });
@@ -137,8 +155,8 @@ public class SharedMovieCustomAdapter extends RecyclerView.Adapter<SharedMovieCu
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
 
-        TextView tvName, tvLink, tvCatagory;
-        ImageView ivCopy;
+        TextView tvName, tvLink, tvCatagory, tvUserId;
+        ImageView ivCopy, ivCopyUserId;
         Button btDelete;
 
         public MyViewHolder(View itemView) {
@@ -147,8 +165,12 @@ public class SharedMovieCustomAdapter extends RecyclerView.Adapter<SharedMovieCu
             tvName = itemView.findViewById(R.id.idMovieName_sharedLink);
             tvCatagory = itemView.findViewById(R.id.idCatagory_sharedLink);
             tvLink = itemView.findViewById(R.id.idMovieLink_sharedLink);
+            tvUserId = itemView.findViewById(R.id.idUserId_sharedLink);
+
             btDelete = itemView.findViewById(R.id.idDelete_sharedLink);
+
             ivCopy = itemView.findViewById(R.id.idCopy_sharedLink);
+            ivCopyUserId = itemView.findViewById(R.id.idCopyUserId_sharedLink);
 
         }
     }

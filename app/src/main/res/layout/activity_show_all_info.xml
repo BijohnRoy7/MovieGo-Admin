@@ -34,5 +34,13 @@
         android:layout_centerHorizontal="true"
         android:text="Show shared movie links" />
 
+    <Button
+        android:id="@+id/idBloackUser_showAllInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/idSharedMovies"
+        android:layout_centerHorizontal="true"
+        android:text="Block User" />
+
 
 </RelativeLayout>

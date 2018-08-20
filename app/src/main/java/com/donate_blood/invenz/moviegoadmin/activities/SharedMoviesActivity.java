@@ -58,10 +58,11 @@ public class SharedMoviesActivity extends AppCompatActivity {
                                 String movieName = jsonObject.getString("movie_name");
                                 String movieLink = jsonObject.getString("movie_link");
                                 String catagory = jsonObject.getString("catagory");
+                                String user_id = jsonObject.getString("user_id");
 
                                 //Toast.makeText(SharedMoviesActivity.this, ""+id, Toast.LENGTH_SHORT).show();
 
-                                SharedMovie sharedMovie = new SharedMovie(id, movieName, movieLink, catagory);
+                                SharedMovie sharedMovie = new SharedMovie(id, movieName, movieLink, catagory, user_id);
                                 sharedMovieList.add(sharedMovie);
 
                             } catch (JSONException e) {
