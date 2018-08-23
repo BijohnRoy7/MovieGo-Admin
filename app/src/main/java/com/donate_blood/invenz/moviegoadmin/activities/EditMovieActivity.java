@@ -28,7 +28,7 @@ import java.util.Map;
 public class EditMovieActivity extends AppCompatActivity {
 
     private static final String TAG = "ROY";
-    private EditText etName, etReleaseYear, etDesc, etLink1, etLink2, etLink3, etLink4, etVideoId;
+    private EditText etName, etReleaseYear, etDesc, etLink1, etLink2, etLink3, etLink4, etVideoId, etSub1, etSub2;
     private ImageView movieImageView;
     private Button btEdit, btDelete, btSelectImage;
 
@@ -45,6 +45,8 @@ public class EditMovieActivity extends AppCompatActivity {
         etLink2 = findViewById(R.id.idLink2_editMovie);
         etLink3 = findViewById(R.id.idLink3_editMovie);
         etLink4 = findViewById(R.id.idLink4_editMovie);
+        etSub1 = findViewById(R.id.idSub1_editMovie);
+        etSub2 = findViewById(R.id.idSub2_editMovie);
         etVideoId = findViewById(R.id.idVideoId_editMovie);
         btSelectImage = findViewById(R.id.idSelectImageButton_editMovie);
         btEdit = findViewById(R.id.idEditButton_editMovie);
@@ -65,6 +67,8 @@ public class EditMovieActivity extends AppCompatActivity {
         String movieYear = movieInfo.getString("MovieYear");
         String imageURL = movieInfo.getString("MovieImage");
         String videoId = movieInfo.getString("VideoId");
+        String subtitle1 = movieInfo.getString("subtitle1");
+        String subtitle2 = movieInfo.getString("subtitle2");
 
 
         etName.setText(movieName);
@@ -75,6 +79,8 @@ public class EditMovieActivity extends AppCompatActivity {
         etLink3.setText(movieLink3);
         etLink4.setText(movieLink4);
         etVideoId.setText(videoId);
+        etSub1.setText(subtitle1);
+        etSub2.setText(subtitle2);
 
         /*########### Load the image using Glide ###########*/
         //Picasso.with(EditMovieActivity.this).load(imageURL).resize(600, 200).into(movieImageView);
@@ -93,6 +99,9 @@ public class EditMovieActivity extends AppCompatActivity {
                 final String link3 = etLink3.getText().toString().trim();
                 final String link4 = etLink4.getText().toString().trim();
                 final String sVideoId = etVideoId.getText().toString().trim();
+                final String sSub1 = etSub1.getText().toString().trim();
+                final String sSub2 = etSub2.getText().toString().trim();
+
                 //String url = et.getText().toString().trim();
 
                 if (id!=null && !name.isEmpty() && !desc.isEmpty() && !year.isEmpty() && !link1.isEmpty()){
@@ -135,6 +144,8 @@ public class EditMovieActivity extends AppCompatActivity {
                             editInfoMap.put("link3", link3);
                             editInfoMap.put("link4", link4);
                             editInfoMap.put("video_id", sVideoId);
+                            editInfoMap.put("subtitle1", sSub1);
+                            editInfoMap.put("subtitle2", sSub2);
 
                             return editInfoMap;
                         }

@@ -128,6 +128,32 @@
             android:hint="Movie Link 4"/>
 
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:layout_marginTop="10dp"
+            android:text="Subtitle link 1"/>
+        <EditText
+            android:id="@+id/idSub1_editMovie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:hint="Subtitle link 1"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:layout_marginTop="10dp"
+            android:text="Subtitle link 2"/>
+        <EditText
+            android:id="@+id/idSub2_editMovie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:hint="Subtitle link 2"/>
+
+
 
 
         <Button

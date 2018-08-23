@@ -166,8 +166,10 @@ public class MovieListActivity extends AppCompatActivity {
                                     String movieReleaseYear = jsonObject.getString("release_year");
                                     String image_link = jsonObject.getString("image_link");
                                     String video_id = jsonObject.getString("video_id");
+                                    String subtitle1 = jsonObject.getString("subtitle1");
+                                    String subtitle2 = jsonObject.getString("subtitle2");
 
-                                    Movie movie = new Movie(id, movieName, movieDesc, movieLink, movieLink1, movieLink2,movieLink3, movieReleaseYear, image_link, video_id);
+                                    Movie movie = new Movie(id, movieName, movieDesc, movieLink, movieLink1, movieLink2,movieLink3, movieReleaseYear, image_link, video_id, subtitle1, subtitle2);
                                     movies.add(movie);
 
                                     //Log.d(TAG, "onResponse: "+movie.getId()+", "+movie.getMovieName());

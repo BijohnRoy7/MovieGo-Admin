@@ -3,9 +3,9 @@ package com.donate_blood.invenz.moviegoadmin.models;
 public class Movie {
 
     private int id;
-    private String movieName, movieDesc, movieLink, movieLink1, movieLink2,movieLink3, releaseDate, imageLink, youtubeVideoId;
+    private String movieName, movieDesc, movieLink, movieLink1, movieLink2,movieLink3, releaseDate, imageLink, youtubeVideoId, sub1, sub2;
 
-    public Movie(int id, String movieName, String movieDesc, String movieLink, String movieLink1, String movieLink2, String movieLink3, String releaseDate, String imageLink, String youtubeVideoId) {
+    public Movie(int id, String movieName, String movieDesc, String movieLink, String movieLink1, String movieLink2, String movieLink3, String releaseDate, String imageLink, String youtubeVideoId, String sub1, String sub2) {
         this.id = id;
         this.movieName = movieName;
         this.movieDesc = movieDesc;
@@ -16,6 +16,25 @@ public class Movie {
         this.releaseDate = releaseDate;
         this.imageLink = imageLink;
         this.youtubeVideoId = youtubeVideoId;
+        this.sub1 = sub1;
+        this.sub2 = sub2;
+    }
+
+
+    public String getSub1() {
+        return sub1;
+    }
+
+    public void setSub1(String sub1) {
+        this.sub1 = sub1;
+    }
+
+    public String getSub2() {
+        return sub2;
+    }
+
+    public void setSub2(String sub2) {
+        this.sub2 = sub2;
     }
 
     public String getYoutubeVideoId() {

@@ -16,7 +16,6 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
-import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -41,7 +40,7 @@ import java.util.Map;
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "ROY";
-    private EditText etMovieName, etMovieDesc, etMovieLink,etMovieLink1, etMovieLink2, etMovieLink3, etReleaseYear, etVideoId;
+    private EditText etMovieName, etMovieDesc, etMovieLink,etMovieLink1, etMovieLink2, etMovieLink3, etReleaseYear, etVideoId, etSubtitle1, etSubtitle2;
     private Button btChooseImage, btAddMovie, btShowMovieInfo;
     private Spinner spCatagory;
     //private ImageView imageViewMovie;
@@ -68,6 +67,8 @@ public class MainActivity extends AppCompatActivity {
         etMovieLink1 =findViewById(R.id.idMovieLink1);
         etMovieLink2 =findViewById(R.id.idMovieLink2);
         etMovieLink3 =findViewById(R.id.idMovieLink3);
+        etSubtitle1 =findViewById(R.id.idSubtitleLink);
+        etSubtitle2 =findViewById(R.id.idSubtitleLink2);
         etVideoId = findViewById(R.id.idMovieVideoId);
         btChooseImage = findViewById(R.id.idMovieImageBtn);
         btAddMovie = findViewById(R.id.idAddMovie);
@@ -94,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
         btAddMovie.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final String sMovieName, sMovieDesc, sMovieLink,sMovieLink1, sMovieLink2, sMovieLink3, sReleaseYear, sCatagory, sVideoId;
+                final String sMovieName, sMovieDesc, sMovieLink,sMovieLink1, sMovieLink2, sMovieLink3, sReleaseYear, sCatagory, sVideoId, sSubtitleLink1, sSubtitleLink2;
 
                 sCatagory = spCatagory.getSelectedItem().toString().trim();
                 sMovieName = etMovieName.getText().toString().trim();
@@ -105,6 +106,8 @@ public class MainActivity extends AppCompatActivity {
                 sMovieLink3 = etMovieLink3.getText().toString().trim();
                 sReleaseYear = etReleaseYear.getText().toString().trim();
                 sVideoId = etVideoId.getText().toString().trim();
+                sSubtitleLink1 = etSubtitle1.getText().toString().trim();
+                sSubtitleLink2 = etSubtitle2.getText().toString().trim();
 
 
                 if (sCatagory.isEmpty() || sMovieName.isEmpty() || sMovieDesc.isEmpty() || sMovieLink.isEmpty() || sReleaseYear.isEmpty() || imageUri==null){
@@ -171,6 +174,7 @@ public class MainActivity extends AppCompatActivity {
                                                         etMovieLink3.setText("");
                                                         etReleaseYear.setText("");
                                                         etVideoId.setText("");
+                                                        etSubtitle1.setText("");
                                                     }
 
                                                 } catch (JSONException e) {
@@ -200,6 +204,8 @@ public class MainActivity extends AppCompatActivity {
                                         movieInfoMap.put("movie_release_year", sReleaseYear);
                                         movieInfoMap.put("movie_catagory", sCatagory);
                                         movieInfoMap.put("video_id", sVideoId);
+                                        movieInfoMap.put("subtitle1", sSubtitleLink1);
+                                        movieInfoMap.put("subtitle2", sSubtitleLink2);
 
                                         return movieInfoMap;
                                     }
